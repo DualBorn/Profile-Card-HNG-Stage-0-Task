@@ -1,0 +1,354 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+    --primary-blue: #1d9bf0;
+    --card-bg: #ffffff;
+    --text-primary: #0f1419;
+    --text-secondary: #536471;
+    --border-color: #eff3f4;
+    --hover-bg: #f7f9f9;
+    --focus-ring: #1d9bf0;
+}
+
+/* Global styles */
+body {
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    background: linear-gradient(to bottom, #e8f5fe 0%, #f5f8fa 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Main content area */
+main {
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Main card container */
+.card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Profile header - Avatar and name side by side (Twitter style) */
+.profile-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 24px 24px 16px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.avatar-wrapper {
+    flex-shrink: 0;
+    margin: 0;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--card-bg);
+    display: block;
+}
+
+.profile-info {
+    flex: 1;
+    min-width: 0;
+    padding-top: 4px;
+}
+
+.profile-info h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 2px;
+    line-height: 1.3;
+}
+
+.username {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+}
+
+/* Upload control styling */
+.upload-control {
+    margin-top: 8px;
+}
+
+.upload-control label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    color: var(--primary-blue);
+    cursor: pointer;
+    padding: 6px 12px;
+    font-weight: 500;
+    border-radius: 20px;
+    background: transparent;
+    border: 1px solid var(--border-color);
+    transition: background 0.2s;
+}
+
+.upload-control input[type="file"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Bio section */
+.bio-section {
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.bio {
+    color: var(--text-primary);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Metadata section (location and time) */
+.metadata {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.metadata > div {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.metadata i {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.time-display {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+}
+
+.timestamp {
+    font-family: "Courier New", Courier, monospace;
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 0.85rem;
+}
+
+.unit {
+    font-size: 0.75rem;
+}
+
+/* Section headings */
+.section-heading {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+}
+
+/* Social links section */
+.social-links {
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.social-links ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: var(--card-bg);
+    color: var(--primary-blue);
+    text-decoration: none;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.social-links i {
+    font-size: 1.1rem;
+}
+
+/* Interests section (hobbies and dislikes) */
+.interests-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    padding: 20px 24px;
+}
+
+.interests-column {
+    padding: 0 12px;
+}
+
+.interests-column:first-child {
+    border-right: 1px solid var(--border-color);
+    padding-left: 0;
+}
+
+.interests-column:last-child {
+    padding-right: 0;
+}
+
+.interests-column ul {
+    list-style: none;
+}
+
+.interests-column li {
+    padding: 8px 0;
+    padding-left: 20px;
+    position: relative;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.interests-column li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary-blue);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* All Hovers and Focus styles for accessibility */
+input:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 2px;
+}
+
+
+.social-links a:hover, .upload-control label:hover {
+    background: var(--hover-bg);
+    border-color: var(--primary-blue);
+}
+
+.social-links a:focus {
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 2px;
+}
+
+/* Responsive design with media queries*/
+@media (max-width: 768px) {
+    main {
+        max-width: 100%;
+    }
+
+    .card {
+        border-radius: 12px;
+    }
+
+    .profile-header {
+        padding: 20px 16px 14px;
+    }
+
+    .avatar {
+        width: 80px;
+        height: 80px;
+    }
+
+    .profile-info h1 {
+        font-size: 1.3rem;
+    }
+
+    .bio-section {
+        padding: 16px;
+    }
+
+    .metadata {
+        padding: 12px 16px;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .social-links {
+        padding: 16px;
+    }
+
+    .interests-wrapper {
+        grid-template-columns: 1fr;
+        padding: 16px;
+        gap: 24px;
+    }
+
+    .interests-column {
+        padding: 0 !important;
+        border: none !important;
+    }
+
+    .interests-column:first-child {
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 20px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 12px;
+    }
+
+    .profile-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 12px;
+    }
+
+    .avatar {
+        width: 90px;
+        height: 90px;
+    }
+
+    .profile-info {
+        width: 100%;
+    }
+
+    .upload-control {
+        display: flex;
+        justify-content: center;
+    }
+
+    .social-links ul {
+        align-items: flex-end;
+    }
+}
