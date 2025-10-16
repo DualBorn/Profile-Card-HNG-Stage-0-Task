@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ae72ca9feb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/styles.css">
+    <title>Profile Card - HNG Stage 0 Task</title>
+</head>
+<body>
+    <main>
+        <article class="card" data-testid="test-profile-card" aria-labelledby="user-name">
+            <!-- Profile header with avatar and name side by side -->
+            <header class="profile-header">
+                <figure class="avatar-wrapper">
+                    <img class="avatar" 
+                         src="https://images.unsplash.com/photo-1596465467444-b6e43222e5f1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=327" 
+                         alt="Christopher Books profile photo" 
+                         data-testid="test-user-avatar">
+                </figure>
+
+                <div class="profile-info">
+                    <h1 id="user-name" data-testid="test-user-name">Christopher Books</h1>
+                    <p class="username">@Godfather(DualBorn)</p>
+                    
+                    <!-- Upload control -->
+                    <div class="upload-control">
+                        <label for="avatarUpload">
+                            <i class="fa-solid fa-camera"></i> Change photo
+                        </label>
+                        <input id="avatarUpload" 
+                               type="file" 
+                               accept="image/*" 
+                               aria-label="Upload a new profile photo">
+                    </div>
+                </div>
+            </header>
+
+            <!-- Bio section -->
+            <section class="bio-section" aria-label="Biography">
+                <p class="bio" data-testid="test-user-bio">
+                    As a Frontend engineer, I'm passionate about crafting clean, accessible web experiences.
+                    I joined HNG because I love being stretched — I wanted to try something new and connect with other talents across the world.
+                    I love growth, music, and challenges — they keep me alive. When I’m not coding, I’m usually 
+                    with my guitar or lost in quiet reflection. I live between two worlds and I pay attention to details,
+                    speak less, and let my work do the talking.
+                </p>
+            </section>
+
+            <!-- Time and location metadata -->
+            <section class="metadata" aria-label="Location and time information">
+                <div class="location">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Lagos, Nigeria</span>
+                </div>
+                <div class="time-display">
+                    <i class="fa-regular fa-clock"></i>
+                    <span class="label">Current time:</span> 
+                    <time class="timestamp" data-testid="test-user-time">Loading...</time>
+                    <span class="unit">ms</span>
+                </div>
+            </section>
+
+            <!-- Social links navigation -->
+            <nav class="social-links" aria-label="Social media profiles" data-testid="test-user-social-links">
+                <h2 class="section-heading">Connect with me</h2>
+                <ul>
+                    <li>
+                        <a href="https://github.com/Godfather-Dualborn" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           data-testid="test-user-social-github"
+                           aria-label="Visit my GitHub profile">
+                            <i class="fa-brands fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           data-testid="test-user-social-twitter"
+                           aria-label="Visit my Twitter profile">
+                            <i class="fa-brands fa-twitter"></i>
+                            <span>Twitter</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           data-testid="test-user-social-linkedin"
+                           aria-label="Visit my LinkedIn profile">
+                            <i class="fa-brands fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Interests section with hobbies and dislikes -->
+            <section class="interests-wrapper" aria-label="Personal interests and preferences">
+                <div class="interests-column">
+                    <h2 class="section-heading">Likes</h2>
+                    <ul data-testid="test-user-hobbies">
+                        <li>Learning JavaScript frameworks and vanilla JS tricks</li>
+                        <li>Reading tech blogs and documentation</li>
+                        <li>I love collaborating with other engineers across all industries</li>
+                        <li>I love sharing the little I know with others</li>
+                    </ul>
+                </div>
+
+                <div class="interests-column">
+                    <h2 class="section-heading">Dislike</h2>
+                    <ul data-testid="test-user-dislikes">
+                        <li>Websites that aren't mobile-friendly</li>
+                        <li>Poorly contrasted text (accessibility matters!)</li>
+                        <li>Code without comments or documentation</li>
+                        <li>Talking too much and not listening</li>
+                    </ul>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <!-- JavaScript -->
+     <script src="script.js"></script>
+</body>
+</html>
