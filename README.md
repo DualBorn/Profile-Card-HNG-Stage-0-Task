@@ -2,12 +2,12 @@
 
 My submission for the HNG12 Frontend Stage 0 task. A clean, responsive profile card built with HTML, CSS, and JavaScript.
 
+---
 ## Live Demo
 
 🔗 **[View Live Site](https://profile-card-hng-stage-0-task.netlify.app/)**
 
-## 
-
+---
 ## What It Does
 
 This is a profile card that shows:
@@ -20,8 +20,7 @@ This is a profile card that shows:
 
 Everything works on phones, tablets, and computers.
 
-## 
-
+---
 ## How to Run
 
 1. Download or clone this project with `git clone [url]`
@@ -30,8 +29,7 @@ Everything works on phones, tablets, and computers.
 
 No installation needed. Just clone and view.
 
-## 
-
+---
 ## Files
 
 ```
@@ -41,8 +39,7 @@ No installation needed. Just clone and view.
 └── README.md     - Documentation (This file you are currently viewing)
 ```
 
-## 
-
+---
 ## Features
 
 - Semantic HTML (proper tags like `<article>`, `<nav>`, `<section>`)  
@@ -53,16 +50,14 @@ No installation needed. Just clone and view.
 - All links open in new tabs  
 - Ready for automated testing (has all `data-testid` attributes)
 
-## 
-
+---
 ## Browser Support
 
 Works on:
 - Chrome, Edge, Firefox, Safari
 - Any modern mobile browser
 
-## 
-
+---
 ## Built With
 
 - Plain HTML5
@@ -70,15 +65,13 @@ Works on:
 - Vanilla JavaScript
 - Font Awesome icons
 
-## 
-
+---
 ## Author
 
 **Godfather (DualBorn)**  
 GitHub: [@ThatsDualBorn](https://github.com/Godfather-Dualborn/)  
 
-## 
-
+---
 ## Task Requirements
 
 This project meets all HNG Stage 0 requirements:
@@ -91,7 +84,5 @@ This project meets all HNG Stage 0 requirements:
 - Social links with proper security attributes
 
 ---
-
-## 
 
 Made for [HNG Internship](https://hng.tech/internship) Stage 0
