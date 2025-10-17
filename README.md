@@ -1,6 +1,11 @@
+
 # Profile Card - HNG Stage 0
 
 My submission for the HNG12 Frontend Stage 0 task. A clean, responsive profile card built with HTML, CSS, and JavaScript.
+
+<p align="center">
+  <img src="./assets/images/profile-card-screnshot.png" alt="Profile Card Screenshot" width="600">
+</p>
 
 ---
 ## Live Demo
