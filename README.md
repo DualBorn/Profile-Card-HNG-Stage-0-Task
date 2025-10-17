@@ -38,6 +38,7 @@ No installation needed. Just clone and view.
 ## Files
 
 ```
+├── assets    - All images
 ├── index.html    - The main page
 ├── styles.css    - All the styling
 ├── script.js     - Handles time updates and photo uploads
