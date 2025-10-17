@@ -4,7 +4,7 @@
 My submission for the HNG12 Frontend Stage 0 task. A clean, responsive profile card built with HTML, CSS, and JavaScript.
 
 <p align="center">
-  <img src="./assets/images/profile-card-screnshot.png" alt="Profile Card Screenshot" width="600">
+  <img src="./assets/images/profile-card-screnshot.png" alt="Profile Card Screenshot" width="800">
 </p>
 
 ---
@@ -74,7 +74,8 @@ Works on:
 ## Author
 
 **Godfather (DualBorn)**  
-GitHub: [@ThatsDualBorn](https://github.com/Godfather-Dualborn/)  
+GitHub: [@DualBorn](https://github.com/DualBorn)
+X (Formerly Twitter): [@DualBorn](https://x.com/DualBorn)
 
 ---
 ## Task Requirements
