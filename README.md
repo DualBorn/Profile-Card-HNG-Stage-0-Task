@@ -152,8 +152,8 @@ Building Stage 1 taught me:
 ## Author
 
 **Godfather (DualBorn)**  
-GitHub: [@DualBorn](https://github.com/DualBorn)
-X (Formerly Twitter): [@DualBorn](https://x.com/DualBorn)
+- GitHub: [@DualBorn](https://github.com/DualBorn)
+- X (Formerly Twitter): [@DualBorn](https://x.com/DualBorn)
 
 ---
 
