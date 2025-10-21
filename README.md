@@ -62,12 +62,13 @@ No installation needed. No dependencies. Just clone and open.
 
 ## File Structure
 
-```
-├── index.html    - The main page
-├── styles.css    - All the styling
-├── script.js     - Handles time updates and photo uploads
-└── README.md     - Documentation (This file you are currently viewing)
-```
+├── index.html       - Homepage with profile card
+├── contact.html     - Contact form page
+├── about.html       - About me page
+├── styles.css       - All styles (Stage 0 + Stage 1)
+├── script.js        - Profile card functionality
+├── contact.js       - Form validation logic
+└── README.md        - This file
 
 ---
 
@@ -120,7 +121,7 @@ Works on:
 - Success message only shows after valid submission
 - All inputs have labels linked with `for`
 - Error messages tied to inputs with `aria-describedby`
-- Fully keyboard accessible
+- 100% keyboard accessible
 
 ### About Page
 - All required sections with correct `data-testid` attributes
