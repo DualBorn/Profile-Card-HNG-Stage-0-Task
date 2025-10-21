@@ -67,7 +67,6 @@ No installation needed. No dependencies. Just clone and open.
 ├── about.html       - About me page
 ├── styles.css       - All styles (Stage 0 + Stage 1)
 ├── script.js        - Profile card functionality
-├── contact.js       - Form validation logic
 └── README.md        - This file
 
 ---
