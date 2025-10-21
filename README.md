@@ -1,68 +1,111 @@
+# Portfolio Website - HNG Stage 0 & 1
 
-# Profile Card - HNG Stage 0
-
-My submission for the HNG12 Frontend Stage 0 task. A clean, responsive profile card built with HTML, CSS, and JavaScript.
+My submission for the HNG13 Frontend Stage 0 together with stage 0. A multi-page portfolio website building on my Stage 0 profile card.
 
 <p align="center">
-  <img src="./assets/images/profile-card-screnshot.png" alt="Profile Card Screenshot" width="800">
+  <img src="./assets/images/stage2.png" alt="Profile Card Screenshot" width="900">
 </p>
 
----
 ## Live Demo
 
 🔗 **[View Live Site](https://profile-card-hng-stage-0-task.netlify.app/)**
 
 ---
-## What It Does
 
-This is a profile card that shows:
-- My name and username
-- A short bio
-- Current time in milliseconds (updates every second)
-- Profile picture (you can upload your own)
-- Links to my social media
-- Things I like and things I don't like
+## What's New in Stage 1
 
-Everything works on phones, tablets, and computers.
+Added two new pages to my existing profile card:
+- **Contact page** with form validation
+- **About page** with personal reflections
+- **Navigation buttons** to move between pages
 
 ---
+
+## Pages
+
+### 1. Home (index.html)
+My profile card from Stage 0 with added navigation. Shows who I am, what I do, and how to connect with me.
+
+### 2. Contact (contact.html)
+A contact form where you can send me a message. Features:
+- Full name, email, subject, and message fields
+- Real-time validation as you fill it out
+- Email format checking
+- Message minimum 10 characters
+- Clear error messages for each field
+- Success message after submission
+
+### 3. About (about.html)
+Personal reflections about my journey:
+- Who I am and why I code
+- My goals in HNG
+- Areas where I'm still learning
+- A note to my future self
+- Extra thoughts on development
+
+---
+
 ## How to Run
 
-1. Download or clone this project with `git clone [url]`
+1. Clone this repository
+   ```bash
+   git clone https://github.com/DualBorn/Profile-Card-HNG-Stage-0-Task
+   cd Profile-Card-HNG-Stage-0-Task
+   ```
+
 2. Open `index.html` in your browser
-3. That's it!
+3. Use the navigation buttons to explore all pages
 
-No installation needed. Just clone and view.
-
----
-## Files
-
-```
-├── index.html    - The main page
-├── styles.css    - All the styling
-├── script.js     - Handles time updates and photo uploads
-└── README.md     - Documentation (This file you are currently viewing)
-```
+No installation needed. No dependencies. Just clone and open.
 
 ---
+
+## File Structure
+
+```
+├── index.html       - Homepage with profile card
+├── contact.html     - Contact form page
+├── about.html       - About me page
+├── styles.css       - All styles (Stage 0 + Stage 1)
+├── script.js        - Profile card functionality
+├── contact.js       - Form validation logic
+└── README.md        - This file
+```
+
+---
+
 ## Features
 
-- Semantic HTML (proper tags like `<article>`, `<nav>`, `<section>`)  
-- Fully accessible (keyboard navigation, screen readers)  
-- Mobile responsive  
-- Live timestamp that updates every second  
-- Upload your own profile photo  
-- All links open in new tabs  
-- Ready for automated testing (has all `data-testid` attributes)
+✅ **Multi-page navigation** - Easy navigation between pages  
+✅ **Form validation** - Real-time error checking  
+✅ **Semantic HTML** - Proper tags throughout  
+✅ **Fully accessible** - Keyboard navigation, ARIA labels, screen reader friendly  
+✅ **Mobile responsive** - Works on all devices  
+✅ **Test-ready** - All required `data-testid` attributes  
+✅ **Consistent design** - Same look and feel across all pages  
 
 ---
+
+## Form Validation Rules
+
+The contact form checks:
+- **Name**: Required, can't be empty
+- **Email**: Required, must be valid format (name@example.com)
+- **Subject**: Required, can't be empty
+- **Message**: Required, minimum 10 characters
+
+Errors show up when you leave a field. Form won't submit until everything is valid.
+
+---
+
 ## Browser Support
 
 Works on:
 - Chrome, Edge, Firefox, Safari
-- Any modern mobile browser
+- All modern mobile browsers
 
 ---
+
 ## Built With
 
 - Plain HTML5
@@ -71,6 +114,43 @@ Works on:
 - Font Awesome icons
 
 ---
+
+## Stage 1 Requirements Met
+
+### Contact Page
+- All required fields with correct `data-testid` attributes
+- Validation prevents invalid submissions
+- Success message only shows after valid submission
+- All inputs have labels linked with `for`
+- Error messages tied to inputs with `aria-describedby`
+- Fully keyboard accessible
+
+### About Page
+- All required sections with correct `data-testid` attributes
+- Semantic HTML (main, section, headings)
+- Proper heading hierarchy
+- Accessible structure
+
+### General
+- Semantic HTML throughout
+- Accessible design
+- Fully responsive
+- Keyboard navigable
+- Clean, readable code
+- Consistent with Stage 0 design
+
+---
+
+## What I Learned
+
+Building Stage 1 taught me:
+- Form validation beyond basic HTML5 attributes
+- Managing accessibility across multiple pages
+- Real-time error handling and user feedback
+- Keeping design consistent across pages
+
+---
+
 ## Author
 
 **Godfather (DualBorn)**  
@@ -78,17 +158,5 @@ GitHub: [@DualBorn](https://github.com/DualBorn)
 X (Formerly Twitter): [@DualBorn](https://x.com/DualBorn)
 
 ---
-## Task Requirements
 
-This project meets all HNG Stage 0 requirements:
-- All required `data-testid` attributes
-- Semantic HTML throughout
-- Accessible design
-- Responsive layout
-- Time shown in milliseconds using `Date.now()`
-- Working avatar upload
-- Social links with proper security attributes
-
----
-
-Made for [HNG Internship](https://hng.tech/internship) Stage 0
+Made for [HNG Internship](https://hng.tech/internship) Stage 1
