@@ -63,13 +63,10 @@ No installation needed. No dependencies. Just clone and open.
 ## File Structure
 
 ```
-├── index.html       - Homepage with profile card
-├── contact.html     - Contact form page
-├── about.html       - About me page
-├── styles.css       - All styles (Stage 0 + Stage 1)
-├── script.js        - Profile card functionality
-├── contact.js       - Form validation logic
-└── README.md        - This file
+├── index.html    - The main page
+├── styles.css    - All the styling
+├── script.js     - Handles time updates and photo uploads
+└── README.md     - Documentation (This file you are currently viewing)
 ```
 
 ---
@@ -159,4 +156,4 @@ X (Formerly Twitter): [@DualBorn](https://x.com/DualBorn)
 
 ---
 
-Made for [HNG Internship](https://hng.tech/internship) Stage 1
+Made for [HNG Internship](https://hng.tech/internship) Stage 0
