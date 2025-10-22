@@ -1,67 +1,78 @@
 const timeElement = document.querySelector('[data-testid="test-user-time"]');
 const avatarImage = document.querySelector('[data-testid="test-user-avatar"]');
 const uploadInput = document.getElementById('avatarUpload');
-const form = document.getElementById('contactForm');
-const nameInput = document.querySelector('[data-testid="test-contact-name"]');
-const emailInput = document.querySelector('[data-testid="test-contact-email"]');
-const subjectInput = document.querySelector('[data-testid="test-contact-subject"]');
-const messageInput = document.querySelector('[data-testid="test-contact-message"]');
-const successBanner = document.querySelector('[data-testid="test-contact-success"]');
-const nameError = document.querySelector('[data-testid="test-contact-error-name"]');
-const emailError = document.querySelector('[data-testid="test-contact-error-email"]');
-const subjectError = document.querySelector('[data-testid="test-contact-error-subject"]');
-const messageError = document.querySelector('[data-testid="test-contact-error-message"]');
 
 
-// Update the timestamp with current time in milliseconds
-function updateTime() {
-    timeElement.textContent = Date.now();
+// Stage 1 Task
+if(timeElement) {
+    // Update the timestamp with current time in milliseconds
+    function updateTime() {
+        timeElement.textContent = Date.now();
+    }
+
+    // Set the time right away when page loads
+    updateTime();
+
+    // Keep updating every second so it stays current
+    setInterval(updateTime, 1000);
 }
 
-// Set the time right away when page loads
-updateTime();
 
-// Keep updating every second so it stays current
-setInterval(updateTime, 1000);
+if (uploadInput && avatarImage) {
+    // Handle avatar photo uploads
+    uploadInput.addEventListener('change', function(event) {
+        const file = event.target.files[0];
+        
+        // If no file selected, just return
+        if (!file) return;
 
-// Handle avatar photo uploads
-uploadInput.addEventListener('change', function(event) {
-    const file = event.target.files[0];
-    
-    // If no file selected, just return
-    if (!file) return;
+        // Make sure it's actually an image file
+        if (!file.type.startsWith('image/')) {
+            alert('Please select an image file');
+            return;
+        }
 
-    // Make sure it's actually an image file
-    if (!file.type.startsWith('image/')) {
-        alert('Please select an image file');
-        return;
-    }
+        // Clean up old blob URL to prevent memory leaks
+        // I had issues with this before so always revoke old URLs
+        if (avatarImage.src.startsWith('blob:')) {
+            URL.revokeObjectURL(avatarImage.src);
+        }
 
-    // Clean up old blob URL to prevent memory leaks
-    // I had issues with this before so always revoke old URLs
-    if (avatarImage.src.startsWith('blob:')) {
-        URL.revokeObjectURL(avatarImage.src);
-    }
+        // Create a URL for the uploaded image and set it
+        const imageUrl = URL.createObjectURL(file);
+        avatarImage.src = imageUrl;
+        avatarImage.alt = `Profile photo - ${file.name}`;
+    });
 
-    // Create a URL for the uploaded image and set it
-    const imageUrl = URL.createObjectURL(file);
-    avatarImage.src = imageUrl;
-    avatarImage.alt = `Profile photo - ${file.name}`;
-});
-
-// Clean up when user leaves the page
-window.addEventListener('beforeunload', function() {
-    if (avatarImage.src.startsWith('blob:')) {
-        URL.revokeObjectURL(avatarImage.src);
-    }
-});
+    // Clean up when user leaves the page
+    window.addEventListener('beforeunload', function() {
+        if (avatarImage.src.startsWith('blob:')) {
+            URL.revokeObjectURL(avatarImage.src);
+        }
+    });
+}
 
 
 
 
-// Stage 2
+// Stage 2 Task
+const form = document.getElementById('contactForm');
 
-// Validate name field
+if (form) {
+// / Handle form submission
+form.addEventListener('submit', function(event) {
+    const nameInput = document.querySelector('[data-testid="test-contact-name"]');
+    const emailInput = document.querySelector('[data-testid="test-contact-email"]');
+    const subjectInput = document.querySelector('[data-testid="test-contact-subject"]');
+    const messageInput = document.querySelector('[data-testid="test-contact-message"]');
+    const successBanner = document.querySelector('[data-testid="test-contact-success"]');
+    const nameError = document.querySelector('[data-testid="test-contact-error-name"]');
+    const emailError = document.querySelector('[data-testid="test-contact-error-email"]');
+    const subjectError = document.querySelector('[data-testid="test-contact-error-subject"]');
+    const messageError = document.querySelector('[data-testid="test-contact-error-message"]');
+
+
+    // Validate name field
 function validateName() {
     const value = nameInput.value.trim();
     
@@ -173,8 +184,6 @@ messageInput.addEventListener('input', function() {
     }
 });
 
-// Handle form submission
-form.addEventListener('submit', function(event) {
     event.preventDefault();
     
     // Validate all fields
@@ -207,3 +216,4 @@ form.addEventListener('submit', function(event) {
         }
     }
 });
+}
